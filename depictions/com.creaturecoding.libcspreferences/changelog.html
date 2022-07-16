@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Changelog</title>
+  <base target="_top">
+  <link rel="stylesheet" type="text/css" href="../resources/css/style.css" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <script type="text/javascript" src="../resources/js/thankssaurik.js"></script>
+</head>
+
+<body class="pinstripe">
+  <panel>
+
+    <block>
+      <p>libCSPreferences Changelog</p>
+    </block>
+
+    <label>Version 0.9.8 (May 21, 2018)</label>
+    <fieldset>
+      <div>
+        <li>Refactored 3DTouch for greater compatibility</li>>
+
+      </div>
+    </fieldset>
+
+    <label>Version 0.9.7 (January 22, 2018)</label>
+    <fieldset>
+      <div>
+        <li>added CSPCalloutCell for use of accessoryView and border callouts</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.9.6 (January 19, 2018)</label>
+    <fieldset>
+      <div>
+        <li>switched to 10.1 sdk </li>
+        <li>added option for openInSafari to open in the safari app</li>
+        <li>fixed interaction issue on the CSPImageCell</li>
+        <li>initial work on verifying you are using the official liCSPreferences</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.9.3 (December 18, 2017)</label>
+    <fieldset>
+      <div>
+        <li>Added CSPreferencesAuthenticate for authenticating a package with a server</li>
+        <li>Fixed issue where the decimal keypad would appear with a comma in some languages making it impossible to type a period</li>
+        <li>Rewrote CSPValueCell to be more versatile</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.9.2 (December 11, 2017)</label>
+    <fieldset>
+      <div>
+        <li>Added CSPDatePickerCell just need to fix saving of the supplied date</li>
+        <li>Added CSPValueCell for displaying a decimal value and trimming it to 4 digits</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.9.1 (December 11, 2017)</label>
+    <fieldset>
+      <div>
+        <li>Fixed bug in the preference provider that would cause colors to render incorrectly</li>
+        <li>Added CSPVersionCell for showing the current version of the package</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.9.0 (December 9, 2017)</label>
+    <fieldset>
+      <div>
+        <li>- Fixed crash when 3dTouching imageCell in backup views</li>
+        <li>- Added CSPSideImageCell as a proper image selection cell with options to store selected image in a directory of
+          your choice</li>
+        <li>- Modified the image preview controller, will be adding UIDocumentInteractionController in the future</li>
+        <li>- Lots of improvements to the CSPMailComposeManager</li>
+        <li> - Added option to attach files with auto detected mime-types</li>
+        <li> - Added option to include logs (Cydia.log, Package.log, Condensed Package.log)</li>
+        <li> - Added device information heads including (Device Name, Device Model, and Device Software Version)</li>
+        <li>- Modified the layout of the entire project, everything is now better organized and easier to maintain. </li>
+        <li>- Cleaned up the headers throughout the project which fixed many issues with the compilation process</li>
+        <li>- Added proper restring support with option to either respring with a nice fade out animation or restring and return
+          to the settings page</li>
+        <li>- Added ‘isDecimalWithNegetive’ keyboard option to PSEditTextCell specifiers which adds a keyboard toolbar with an
+          option to toggle negative/positive on the DecimalKeypad</li>
+        <li>- Refactored all the alert views for copying tweak lists and resprings</li>
+        <li>- Added alpha, red, green, blue, hue, saturation, and brightness convenience methods to UIColor+ColorFromHex </li>
+        <li>- Fixed compilation error with with the CSPBackupItemView (that was annoying)</li>
+        <li>- Added Preview for CSPSideImageCell</li>
+        <li>- Added CSPProcessManager for running commands via NSTask rather than ugly posix_spawn or depreciated system()</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.8.0 (November 28, 2017)</label>
+    <fieldset>
+      <div>
+        <li>cleaned up SOURCE_FILES</li>
+        <li>fixed preferences failing to load when libCSColorPicker was not installed (even when it wasnt used by the tweak)</li>
+        <li>added 'alsoSetKeys', and 'alsoSetKeysInverted' for applying a value to other specifiers when setting a value (keys
+          must be of the same value type as the specifier that is setting the values)</li>
+        <li>added 'defaultsPath' key to the backup / restore specifier for restoring defaults from a plist</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.7.9 (November 7, 2017)</label>
+    <fieldset>
+      <div>
+        <li>added option for sublabels on any tablecell</li>
+        <li>added option to enable/disable any specifier when changing editing a specifier</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.7.8 (October 20, 2017)</label>
+    <fieldset>
+      <div>
+        <li>added option for isInvertedToggleGroup</li>
+        <li>general refactoring</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.7.5 (October 17, 2017)</label>
+    <fieldset>
+      <div>
+        <li>added option to copy entire settings pages to another page</li>
+        <li>added option to long press on a cell to copy its value to another cell(not very dynamic at the moment)</li>
+      </div>
+    </fieldset>
+
+    <label>Version 0.7.3 (October 13, 2017)</label>
+    <fieldset>
+      <div>
+        <li>initial public release</li>
+      </div>
+    </fieldset>
+
+  </panel>
+</body>
+
+</html>
