@@ -1,8 +1,8 @@
-Origin: CreatureSurvive's Repo
-Label: CreatureSurvive's Repo
+Origin: X2NIOS Repo
+Label: X2NIOS Repo
 Suite: stable
 Version: 1.0
-Codename: CreatureSurvive's Repo
+Codename: X2NIOS Repo
 Architectures: iphoneos-arm
 Components: main
 Description: My Personal Repo
