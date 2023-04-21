@@ -131,6 +131,27 @@
 </div>
   </section>
   
+
+<div class="badge bg-primary">
+    Số lượt truy cập:
+    <span id="count"></span>
+</div>
+
+<script>
+    // Kiểm tra localStorage xem có số lần truy cập trước đó không
+    if (localStorage.getItem("count") === null) {
+        localStorage.setItem("count", 0);
+    }
+
+    // Tăng giá trị của count và lưu vào localStorage
+    localStorage.setItem("count", parseInt(localStorage.getItem("count")) + 1);
+
+    // Hiển thị số lượt truy cập
+    document.getElementById("count").innerHTML = localStorage.getItem("count");
+</script>
+
+
+
   <!-- Footer Section -->
   <footer class="bg-dark text-center text-white py-3">
     <div class="container">
