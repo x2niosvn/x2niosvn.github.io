@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://diviengine.com/wp-content/uploads/2023/01/ChatGPT-Logooptimized-610x610.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password Generator | X2NIOSVN</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container mt-5">
+		<h1>X2NIOSVN | Password Generator</h1>
+		<p>Generate a strong password for your account!</p>
+		<!-- Form to generate password -->
+		<form>
+			<div class="mb-3">
+				<label for="password-length" class="form-label">Password Length:</label>
+				<input type="number" id="password-length" class="form-control" min="6" max="20" value="8">
+			</div>
+			<div class="mb-3">
+				<label for="include-uppercase" class="form-label">Include Uppercase Letters:</label>
+				<input type="checkbox" id="include-uppercase" class="form-check-input" checked>
+			</div>
+			<div class="mb-3">
+				<label for="include-lowercase" class="form-label">Include Lowercase Letters:</label>
+				<input type="checkbox" id="include-lowercase" class="form-check-input" checked>
+			</div>
+			<div class="mb-3">
+				<label for="include-numbers" class="form-label">Include Numbers:</label>
+				<input type="checkbox" id="include-numbers" class="form-check-input" checked>
+			</div>
+			<div class="mb-3">
+				<label for="include-special" class="form-label">Include Special Characters:</label>
+				<input type="checkbox" id="include-special" class="form-check-input">
+			</div>
+			<div class="mb-3">
+				<button type="button" class="btn btn-primary" id="generate-btn">Generate Password</button>
+			</div>
+			<div class="mb-3">
+				<label for="generated-password" class="form-label">Generated Password:</label>
+				<input type="text" id="generated-password" class="form-control" readonly>
+			</div>
+		</form>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Password Generator JS -->
+	<script>
+	    // Password generation function
+function generatePassword() {
+	// Get password length
+	var passwordLength = parseInt(document.getElementById("password-length").value);
+
+	// Get character types to include
+	var includeUppercase = document.getElementById("include-uppercase").checked;
+	var includeLowercase = document.getElementById("include-lowercase").checked;
+	var includeNumbers = document.getElementById("include-numbers").checked;
+	var includeSpecial = document.getElementById("include-special").checked;
+
+	// Define character sets
+	var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+	var numberChars = "0123456789";
+	var specialChars = "!@#$%^&*()_-+={}[]:;\"'<>,.?/";
+
+	// Create character set based on user choices
+	var charSet = "";
+	if (includeUppercase) {
+		charSet += uppercaseChars;
+	}
+	if (includeLowercase) {
+		charSet += lowercaseChars;
+	}
+	if (includeNumbers) {
+		charSet += numberChars;
+	}
+	if (includeSpecial) {
+		charSet += specialChars;
+	}
+
+	// Generate random password
+	var password = "";
+	for (var i = 0; i < passwordLength; i++) {
+		var randomIndex = Math.floor(Math.random() * charSet.length);
+		password += charSet.charAt(randomIndex);
+	}
+
+	// Display generated password
+	document.getElementById("generated-password").value = password;
+}
+
+// Add event listener to generate button
+document.getElementById("generate-btn").addEventListener("click", generatePassword);
+
+	</script>
+</body>
+</html>
